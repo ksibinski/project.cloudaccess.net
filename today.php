@@ -13,7 +13,7 @@
 <p>Your IP number is:
     <?php
         $ip = $_SERVER['REMOTE_ADDR'];
-        $handle = fopen('ip_log.txt'', 'a+);
+        $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
         echo $ip;
