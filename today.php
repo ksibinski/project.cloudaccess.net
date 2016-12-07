@@ -17,6 +17,7 @@
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
         echo $ip;
+        phpinfo();
     ?>
 </p>
 </body>
