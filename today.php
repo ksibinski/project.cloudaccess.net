@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Today&rsquo;s Date</title>
 </head>
-
 <body>
 <p>Today&rsquo;s date (according to this web server) is
     <?php
-    echo date('l, F jS Y.');
+        echo date('l, F jS Y.');
     ?>
 </p>
 <p>Your IP number is:
     <?php
-    $ip = $_SERVER['REMOTE_ADDR'];
-    echo $ip;
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $handle = fopen('ip_log.txt'', 'a+);
+        fwrite($handle, $ip); fwrite($handle, "\n");
+        fclose($handle);
+        echo $ip;
     ?>
 </p>
 </body>
