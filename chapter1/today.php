@@ -7,9 +7,11 @@
 Installation 21
 <body>
 <p>Today&rsquo;s date (according to this web server) is
-<?php
-echo date('l, F jS Y.');
-?>
+    <?php
+
+            echo date('l, F jS Y.');
+
+    ?>
 </p>
 </body>
 </html>
