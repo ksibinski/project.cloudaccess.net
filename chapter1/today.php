@@ -12,5 +12,11 @@
     echo date('l, F jS Y.');
     ?>
 </p>
+<p>Your IP number is:
+    <?php
+    $ip = $_SERVER['REMOTE_ADDR'];
+    echo $ip;
+    ?>
+</p>
 </body>
 </html>
