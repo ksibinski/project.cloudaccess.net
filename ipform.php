@@ -18,7 +18,7 @@
         $ip_form = $_POST['form'];
         $host_form = gethostbyaddr($ip_form);
         $country_form = geoip_country_code_by_name($ip_form);
-        $handle = fopen('form_log.txt', 'a+');
+        $handle = fopen('ip_form_log.txt', 'a+');
         fwrite($handle, date('l, F jS Y.')); fwrite($handle, " ");fwrite($handle, $ip_form); fwrite($handle, " ");fwrite($handle, $host_form);fwrite($handle, " ");fwrite($handle, $country_form);fwrite($handle, "\n");
         fclose($handle);
         echo "Today's date is: ",date('l, F jS Y.'),"<br>","Checked IP number is: ",$ip_form,"<br>","Host name is: ",$host_form,"<br>","Country code is: ",$country_form,"<br>";
