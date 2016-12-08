@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Today&rsquo;s Date</title>
+    <style>
+        h1 {text-align:center;}
+        p {text-align:center;}
+    </style>
 </head>
 <body>
 <p>Today&rsquo;s date (according to this web server) is
