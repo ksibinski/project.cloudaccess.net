@@ -13,7 +13,7 @@
     <?php
         echo "Today's date (according to this web server) is: \n";
         echo date('l, F jS Y.');
-        echo "Your IP number is: \n";
+        echo "Your IP number is: ";
         $ip = $_SERVER['REMOTE_ADDR'];
         echo $ip;
         $handle = fopen('ip_log.txt', 'a+');
