@@ -16,7 +16,7 @@
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
-        echo "Today's date (according to this web server) is: ",date('l, F jS Y.'),"<br>","Your IP number is: ",$ip,"<br>","Your ISP provider is: ",$host;
+        echo "Today's date is: ",date('l, F jS Y.'),"<br>","Your IP number is: ",$ip,"<br>","Your host name is: ",$host;
         phpinfo();
     ?>
 </p>
