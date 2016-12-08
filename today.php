@@ -13,10 +13,11 @@
     <?php
         $ip = $_SERVER['REMOTE_ADDR'];
         $host = gethostbyaddr($ip);
+        $isp = geoip_isp_by_name($host);
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
-        echo "Today's date is: ",date('l, F jS Y.'),"<br>","Your IP number is: ",$ip,"<br>","Your host name is: ",$host,"<br>";
+        echo "Today's date is: ",date('l, F jS Y.'),"<br>","Your IP number is: ",$ip,"<br>","Your host name is: ",$host,"<br>","Your ISP is: ",$isp;
         phpinfo();
     ?>
 </p>
