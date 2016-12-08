@@ -19,7 +19,7 @@
         $host_form = gethostbyaddr($ip_form);
         $country_form = geoip_country_code_by_name($ip_form);
         $handle = fopen('ip_form_log.txt', 'a+');
-        fwrite($handle, date(DATE_RFC2822)); fwrite($handle, " ");fwrite($handle, $ip_form); fwrite($handle, " ");fwrite($handle, $host_form);fwrite($handle, " ");fwrite($handle, $country_form);fwrite($handle, "\n");
+        fwrite($handle, date(DATE_RFC2822)); fwrite($handle, "      ");fwrite($handle, $ip_form); fwrite($handle, "     ");fwrite($handle, $host_form);fwrite($handle, "        ");fwrite($handle, $country_form);fwrite($handle, "\n");
         fclose($handle);
         echo "Today's date is: ",date('l, F jS Y.'),"<br>","IP number: ",$ip_form,"<br>","Host name: ",$host_form,"<br>","Country code: ",$country_form,"<br>";
         //phpinfo();
