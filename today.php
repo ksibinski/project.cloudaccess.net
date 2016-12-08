@@ -9,12 +9,11 @@
     </style>
 </head>
 <body>
-<p>Today&rsquo;s date (according to this web server) is
+<p>
     <?php
+        echo "Today's date (according to this web server) is";
         echo date('l, F jS Y.');
-    ?>
-        Your IP number is:
-    <?php
+        echo "Your IP number is:";
         $ip = $_SERVER['REMOTE_ADDR'];
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
