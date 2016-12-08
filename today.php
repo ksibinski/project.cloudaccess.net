@@ -13,7 +13,7 @@
     <?php
         $ip = $_SERVER['REMOTE_ADDR'];
         $host = gethostbyaddr($ip);
-        $isp = geoip_isp_by_name($host);
+        $isp = geoip_isp_by_name($ip);
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
