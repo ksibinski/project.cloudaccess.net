@@ -11,14 +11,14 @@
 <body>
 <p>
     <?php
-        echo "Today's date (according to this web server) is: ";
+        echo "Today's date (according to this web server) is: \n";
         echo date('l, F jS Y.');
-        echo "Your IP number is: ";
+        echo "Your IP number is: \n";
         $ip = $_SERVER['REMOTE_ADDR'];
+        echo $ip;
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
-        echo $ip;
         phpinfo();
     ?>
 </p>
