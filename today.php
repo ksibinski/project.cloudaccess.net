@@ -19,7 +19,7 @@
         $host = gethostbyaddr($ip);
         $country = geoip_country_code_by_name($ip);
         $handle = fopen('ip_log.txt', 'a+');
-        fwrite($handle, date('l, F jS Y.')); fwrite($handle, " ");fwrite($handle, $ip); fwrite($handle, " ");fwrite($handle, $host);fwrite($handle, " ");fwrite($handle, $country);fwrite($handle, "\n");
+        fwrite($handle, date(DATE_RFC2822)); fwrite($handle, " ");fwrite($handle, $ip); fwrite($handle, " ");fwrite($handle, $host);fwrite($handle, " ");fwrite($handle, $country);fwrite($handle, "\n");
         fclose($handle);
         echo "Today's date is: ",date('l, F jS Y.'),"<br>","Your IP number is: ",$ip,"<br>","Your host name is: ",$host,"<br>","Your country code is: ",$country,"<br>";
         //phpinfo();
