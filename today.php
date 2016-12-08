@@ -11,9 +11,9 @@
 <body>
 <p>
     <?php
-        echo "Today's date (according to this web server) is: ".date('l, F jS Y.')."<br>";
+        echo "Today's date (according to this web server) is: ",date('l, F jS Y.'),PHP_EOL;
         $ip = $_SERVER['REMOTE_ADDR'];
-        echo "Your IP number is: ".$ip."<br>";
+        echo "Your IP number is: ",$ip,PHP_EOL;
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, $ip); fwrite($handle, "\n");
         fclose($handle);
