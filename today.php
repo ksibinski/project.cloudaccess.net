@@ -21,7 +21,7 @@
         $handle = fopen('ip_log.txt', 'a+');
         fwrite($handle, date(DATE_RFC2822)); fwrite($handle, "      ");fwrite($handle, $ip); fwrite($handle, "      ");fwrite($handle, $host);fwrite($handle, "     ");fwrite($handle, $country);fwrite($handle, "\n");
         fclose($handle);
-        echo "Today's date is: ",date('l, F jS Y.'),"<br>","Your IP number: ",$ip,"<br>","Your host name: ",$host,"<br>","Your country code: ",$country,"<br>";
+        echo "Today's date is: ",date(DATE_RFC2822),"<br>","Your IP number: ",$ip,"<br>","Your host name: ",$host,"<br>","Your country code: ",$country,"<br>";
         //phpinfo();
     ?>
 </p>
