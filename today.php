@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>Today&rsquo;s Date</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
 </head>
 <body>
 <form action="ipform.php" method="post">
