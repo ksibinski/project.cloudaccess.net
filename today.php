@@ -12,6 +12,10 @@
     <p>Enter IP to check: <input title="IP Check Form" type="text" name="form"/></p>
     <p><input type="submit" /></p>
 </form>
+<!-- Accent-colored raised button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Button
+</button>
 <p>
     <?php
         $ip = $_SERVER['REMOTE_ADDR'];
